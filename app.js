@@ -73,7 +73,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID:     process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_GOOGLE,
-    callbackURL: "http://localhost:3000/auth/google/main",
+    callbackURL: "https://frozen-hollows-41698.herokuapp.com/auth/google/main",
     passReqToCallback   : true
   },
   function(request, accessToken, refreshToken, profile, done) {
