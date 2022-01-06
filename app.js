@@ -85,7 +85,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_ID,
     clientSecret: process.env.FACEBOOK_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/main"
+    callbackURL: "https://frozen-hollows-41698.herokuapp.com/auth/facebook/main"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ facebookId: profile.id }, function (err, user) {
@@ -96,7 +96,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_ID,
     clientSecret: process.env.GITHUB_SECRET,
-    callbackURL: "http://localhost:3000/auth/github/main"
+    callbackURL: "https://frozen-hollows-41698.herokuapp.com/auth/github/main"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ githubId: profile.id }, function (err, user) {
@@ -194,11 +194,11 @@ req.login(user, function(err){
   }
 })
 });
-app.listen(process.env.PORT);
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
-app.listen(port, function(req, res){
-  console.log("port connected");
+
+app.listen(port, function(req,res){
+  console.log("connected");
 });
