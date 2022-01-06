@@ -29,7 +29,7 @@ h5{
 }
 p{
   font-family: 'Courgette', cursive;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 
@@ -40,9 +40,9 @@ p{
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 @media (max-width: 700px) {
-  .wrapper{
+  .wrapper-lang{
     margin: 200px auto;
-  }d
+  }
 }
 .wrapper-lang .box{
   width: 350px;
