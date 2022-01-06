@@ -29,7 +29,7 @@ h5{
 }
 p{
   font-family: 'Courgette', cursive;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 
@@ -139,9 +139,6 @@ html{
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
-
-
-
 .hero-section{
   align-items: flex-start;
   display: flex;
