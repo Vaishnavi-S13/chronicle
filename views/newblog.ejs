@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+
+<!--PreLoader-->
+  <div class="loader">
+      <div class="loader-inner">
+          <div class="circle"></div>
+      </div>
+  </div>
+  <!--PreLoader Ends-->
+
+  <form class="form-control" action="/blog/new" method="post">
+    <div class="">
+      <label class="form-label">Title</label>
+      <input class="form-control" type="text" name="title" value="">
+    </div>
+    <div class="">
+      <label class="form-label">Blog Count</label>
+      <input class="form-control" min="1" type="number" name="count" value="">
+    </div>
+    <div class="">
+      <label class="form-label">Content</label>
+      <textarea class="form-control" name="content" rows="4"></textarea>
+    </div>
+    <div class="">
+      <label class="form-label">Image</label>
+      <input type="file" name="cover" class="book-cover filepond">
+    </div>
+
+
+    <button class="boxed-btn"type="submit" name="button">submit</button>
+  </form>
+<%- include("partials/footer"); -%>

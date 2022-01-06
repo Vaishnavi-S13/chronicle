@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <article class="blog-card">
+        <div class="blog-card__background">
+          <div class="card__background--wrapper">
+            <div class="card__background--main" style="background-image: url(images/snow.gif);">
+              <!-- <div class="card__background--layer"></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="blog-card__head">
+          <span class="date__box position-absolute top-0 start-0">
+            <span class=" date__day">blog-1</span>
+
+          </span>
+        </div>
+     <div class="blog-card__info col-sm-12">
+          <h1><%=title%></h1>
+          <p>
+            <a href="#" class="icon-link mr-3"><i class="fa fa-pen-square"></i> <%= createdAt %></a>
+          </p>
+          <p style="font-size:18px;"><%=content %></p>
+
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,138 @@
+<%- include("partials/header"); -%>
+
+
+<!--PreLoader-->
+  <div class="loader">
+      <div class="loader-inner">
+          <div class="circle"></div>
+      </div>
+  </div>
+  <!--PreLoader Ends-->
+
+  <div class="se-pre-con"></div>
+    <div class="top-header-area" id="sticker">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12 col-sm-12 text-center">
+           <div class="main-menu-wrap">
+             <!-- logo -->
+             <!-- <div class="site-logo">
+               <a href="/news">
+                 <img class="thumbnail rounded" src="images/logo.png" alt="">
+               </a>
+             </div> -->
+             <!-- logo -->
+
+             <!-- menu start -->
+             <nav class="main-menu text-center ">
+               <ul>
+                 <li class="current-list-item"><a href="/">Home</a></li>
+                 <li><a href="#about">About</a></li>
+
+                 <li><a href="#contact">Contact</a></li>
+               </ul>
+             </nav>
+             <!-- menu end -->
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- end header -->
+   <!-- hero area -->
+   <div class="hero-area hero-bg">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-9 offset-lg-2 text-center">
+           <div class="hero-text">
+             <div class="hero-text-tablecell">
+               <p class="subtitle">BLOG</p>
+               <h1>The Chronicle </h1>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+   <!-- end hero area -->
+ <div class="align-middle d-flex justify-content-center p-3">
+        <div class=" tm-post text-center">
+          <div class="card shadow-lg p-3">
+            <hr class="tm-hr-primary">
+                  <% blogs.forEach(function(blog){ %>
+                <div class="row  text-color">
+                  <div class="col-md-4 text-center ps-0">
+                    <img src="images/snow.gif" alt="Image" class=" tm-img rounded">
+                  </div>
+
+
+                <div class="col-md-8 text-content justify-content-center align-middle  ">
+                    <h2 class="tm-pt-30 tm-color-primary tm-post-title">Simple and useful HTML layout</h2>
+                    <p class="tm-pt-30 p-3">
+                        <%=blog.content.substring(0,150) + "..."%>
+                        <a href="/blog/<%=blog.count %>">Read More</a>
+                    </p>
+                </div>
+               </div>
+
+                <span class="position-absolute top-0 end-0 tm-new-badge"><%= blog.count%></span>
+
+            <div class="d-flex justify-content-between tm-pt-45">
+                <span class="tm-color-primary">Created at:</span>
+                <span class="tm-color-primary"><%= blog.createdAt.toLocaleDateString() %></span>
+            </div>
+               <% }) %>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <span class="span">36 comments</span>
+                <span class="span">by Admin Nat</span>
+            </div>
+          </div>
+
+  </div></div>
+
+  <!-- footer -->
+<div class="footer-area">
+<div class="container">
+  <div class="row">
+    <div id="about" class="col-lg-6 col-md-6 col-sm-12 mt-2">
+      <div class="footer-box about-widget">
+        <h2 class="widget-title">About us</h2>
+        <p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+      </div>
+    </div>
+
+    <div id="contact" class="col-lg-6 col-md-6 col-sm-12 mt-2">
+      <div class="footer-box subscribe">
+        <h2 class="widget-title">Get In Touch</h2>
+        <p>Send Your Queries</p>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-0b37986d-6cb3-47ff-8bc0-d26b055d042c"></div>
+
+
+       <button><a href="mailto:vaishnavis1301@gmail.com"type="submit" role="button"> <i class="fas fa-paper-plane"> </i></a></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end footer -->
+
+<!-- copyright -->
+<div class="copyright">
+<div class="container">
+    <div class="text-center">
+      <p class="">Copyrights &copy; 2021 - <a href="#">Chronicle</a>,  All Rights Reserved.</p>
+  </div>
+</div>
+</div>
+<!-- end copyright -->
+<div class="empty">
+
+</div>
+
+
+
+<%- include("partials/footer"); -%>

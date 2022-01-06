@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+
+</head>
+<body>
+  <!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#" style="color:#FF4301;align-content: left;">The CHRONICLE</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="/">Home</a></li>
+        <li><a href="/main/contact">Contact Us</a></li>
+        <li><a href="/main/about">About</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner">hhhh</div>
+  <div class="about">
+    <div class="content">
+      <hr style="color:#FF4301;height:2px;">
+      <div class="title"style="color:#FF4301">Pick anything...!!!!</div>
+      <p style="color:white">&nbsp&nbsp&nbsp&nbsp&nbspWe have a variety of modules that brings up knowledge and to smash your boredom. Just click on any desirable category... Go ahead..!!! Something is waiting for you.</p>
+      <div style="overflow-x:auto;">
+
+
+    <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://i.gifer.com/PMyd.gif" height="215px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">NEWS</h5>
+            <p class="card-text">&nbsp Grab some intresting and freshly updated news.</p>
+          </div>
+          <div class="card-body">
+            <center><a href="/news"><button type="button" class="btn btn-primary btn-sm">Check Out</button></a></center>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top " src="https://i.gifer.com/Bm7C.gif" height="215px" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">STUDY</h5>
+              <p class="card-text">&nbsp Wanna get some technical taste?  Go ahead.. Click me.</p>
+            </div>
+            <div class="card-body">
+              <center><a href="/study"><button type="button" class="btn btn-primary btn-sm">Check Out</button></a></center>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-sm">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://i.gifer.com/DMKo.gif" height="215px" ,alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">BLOG</h5>
+      <p class="card-text">&nbsp Visit for some intresting blog contents.</p>
+    </div>
+    <div class="card-body">
+      <center><a href="/blog"><button type="button" class="btn btn-primary btn-sm">Check Out</button></a></center>
+    </div>
+  </div>
+</div>
+</div><hr style="color:#FF4301;margin-top:50px;height:2px;">
+</div>
+
+
+  <div class="container">
+    <h2 class="title"style="color:#FF4301">Wanna check the weather aroud you ?</h2>
+  <center>
+    <form class="" action="/main" method="post">
+      <div class="row" style="margin-top:125px;">
+      <div class="col-sm">
+        <div class="card" style="width: 30rem;">
+          <!-- <div style="background-image:url(<%=bg%>);" class="card-imge-top bg-image shadow-lg p-3 mb-5" style="width: 18rem;"> -->
+
+          <img style="width: 30rem; height: 300px;" class="card-img-top" src="<%-bg%>"  ,alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">WEATHER</h5>
+            <p class="card-text">&nbsp Go on! check out your weather buddy.</p>
+            <input name="city" type="text" class="form-control" placeholder="Search Your Place" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <div style="padding:10px;">
+              <center><a href="#"><button type="submit" class="btn btn-primary btn-sm">Check Out</button></a></center>
+            <h5 class="card-title"style="padding:15px;"><%-temperature%> </h5>
+            <img src="<%-imageURL%>" alt="">
+            <h3 class="card-text"><%-query%></h6>
+            <h2 class="card-subtitle mb-2s"><%-description%></h6></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </center>
+  <hr class="footer" style="color:#FF4301;margin-top:50px;">
+</div>
+    </div>
+  </div>
+  <p style="color:white;margin-left:42.5%;">© Chronicle. All Rights Reserved</p>
+
+
+  <!-- <script defer src="/js/mainpage.js" charset="utf-8"></script>
+</body>
+</html> -->
+<%- include("partials/footer"); -%>
