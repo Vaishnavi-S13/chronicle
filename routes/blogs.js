@@ -32,7 +32,7 @@ blog.post("/new", function(req, res){
    blogs.save(function(err){
      if(!err){
        console.log(blogs);
-       res.redirect("/blog");
+       res.redirect("/main/blog");
      }
    });
  });

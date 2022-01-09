@@ -8,43 +8,6 @@
 
 }
 
-header
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.toggle
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
-}
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-}
 .showcase
 {
   position: absolute;
@@ -53,8 +16,9 @@ header .logo
   min-height: 100vh;
   padding: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   background: #111;
   transition: 0.5s;
   z-index: 2;
@@ -64,15 +28,15 @@ header .logo
   right: 300px;
 }
 
-.showcase video
+.showcase
 {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 .overlay
 {
@@ -87,6 +51,9 @@ header .logo
 .text
 {
   position: relative;
+  /* justify-content: center;
+  align-items: center; */
+  /* text-align: center; */
   z-index: 10;
 }
 
@@ -157,42 +124,16 @@ header .logo
 {
   transform: scale(0.5) translateY(-15px);
 }
-.menu
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: #03a9f4;
-}
 
 @media (max-width: 991px)
 {
   .showcase,
   .showcase header
   {
-    padding: 40px;
+    padding: 10px;
+  }
+  img{
+    width: 400px;
   }
   .text h2
   {
