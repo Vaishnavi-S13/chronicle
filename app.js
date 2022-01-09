@@ -23,7 +23,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({limit: '10mb',extended:false}));
 app.use("/news", News);
 app.use("/main", Weather);
-app.use("/blog", blogRouter);
+app.use("/main/blog", blogRouter);
 
 app.use(session({
   secret:"Our secret is a secret.",
