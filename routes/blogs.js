@@ -38,15 +38,17 @@ blog.post("/new", function(req, res){
  });
 blog.get("/:blogId",function(req, res){
   const reqBlogId = req.params.blogId;
-
   Blog.findOne({count: reqBlogId},function(err,blog){
     res.render("full", {
       title:blog.title,
       content: blog.content,
       count: blog.count,
       createdAt:blog.createdAt.toLocaleDateString(),
+      cover:blog.coverImagePath
+
     });
-    saveCover(blogs, blog.cover)
+
+    // saveCover(blogs, req.body.cover)
   });
 });
 
