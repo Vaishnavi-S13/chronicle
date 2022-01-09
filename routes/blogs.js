@@ -28,7 +28,7 @@ blog.post("/new", function(req, res){
 
 
    });
-   // saveCover(blogs, req.body.cover)
+   saveCover(blogs, req.body.cover)
    blogs.save(function(err){
      if(!err){
        console.log(blogs);
@@ -46,7 +46,7 @@ blog.get("/:blogId",function(req, res){
       count: blog.count,
       createdAt:blog.createdAt.toLocaleDateString(),
     });
-    // saveCover(blogs, blog.cover)
+    saveCover(blogs, blog.cover)
   });
 });
 
