@@ -97,7 +97,7 @@
   								<span class="author"><i class="fab fa-readme"></i>     <%- article.content.replace(/<[^>]+>/g, '') %></span>
   							</p>
   							<p class="card-footer mb-0 text-muted">Updated: <span class="text-muted"><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>
-                    <%- moment.utc(article.publishedAt).local().format('hh : mm A') %> </span></p>
+                    <%- moment(article.publishedAt).format('hh : mm A') %> </span></p>
             	</div>
   					</div>
         <% } %>

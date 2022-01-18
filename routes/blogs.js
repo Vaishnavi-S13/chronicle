@@ -25,20 +25,17 @@ blog.post("/new", function(req, res){
      title: req.body.title,
      content: req.body.content,
      count : req.body.count,
-
-
    });
    saveCover(blogs, req.body.cover)
    blogs.save(function(err){
      if(!err){
-       console.log(blogs);
        res.redirect("/main/blog");
      }
    });
  });
 blog.get("/:blogId",function(req, res){
   const reqBlogId = req.params.blogId;
-  
+
   Blog.findOne({count: reqBlogId},function(err,blog){
     res.render("full", {
       title:blog.title,
