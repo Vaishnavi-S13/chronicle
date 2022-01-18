@@ -1,6 +1,5 @@
 <%- include("partials/header"); -%>
 
-
 <!--PreLoader-->
   <div class="loader">
       <div class="loader-inner">
@@ -18,7 +17,7 @@
              <!-- logo -->
              <!-- <div class="site-logo">
                <a href="/news">
-                 <img class="thumbnail rounded" src="images/logo.png" alt="">
+                 <img class="thumbnail rounded" src="images/.gif" alt="">
                </a>
              </div> -->
              <!-- logo -->
@@ -26,7 +25,7 @@
              <!-- menu start -->
              <nav class="main-menu text-center ">
                <ul>
-                 <li class="current-list-item"><a href="/">Home</a></li>
+                 <li class="current-list-item"><a href="/main">Home</a></li>
                  <li><a href="#about">About</a></li>
 
                  <li><a href="#contact">Contact</a></li>
@@ -56,6 +55,39 @@
      </div>
 
    <!-- end hero area -->
+   <!-- logo carousel -->
+ <div class="logo-carousel-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+         <div class="logo-carousel-inner">
+           <div class="single-logo-item">
+             <img src="/images/m.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/t.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/w.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/th.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/f.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/sa.gif" alt="">
+           </div>
+           <div class="single-logo-item">
+             <img src="/images/su.gif" alt="">
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- end logo carousel -->
  <div class="align-middle d-flex justify-content-center p-3">
         <div class=" tm-post text-center">
           <div class="card shadow-lg p-3">
@@ -70,24 +102,28 @@
                 <div class="col-md-8 text-content justify-content-center align-middle  ">
                     <h2 class="tm-pt-30 tm-color-primary tm-post-title"><%=blog.title%></h2>
                     <p class="tm-pt-30 p-3">
-                        <%=blog.content.substring(0,150) + "..."%>
-                        <a href="/main/blog/<%=blog.count %>">Read More</a>
+                        <%=blog.content.substring(0,250) + "..."%>
+
                     </p>
+                    <a class="boxed-btn" href="/main/blog/<%=blog.count %>">Read More</a>
                 </div>
                </div>
 
                 <span class="position-absolute top-0 end-0 tm-new-badge"><%= blog.count%></span>
 
-            <div class="d-flex justify-content-between tm-pt-45">
+            <!-- <div class="d-flex justify-content-between tm-pt-45">
                 <span class="tm-color-primary">Created at:</span>
-                <span class="tm-color-primary"><%= blog.createdAt.toLocaleDateString() %></span>
-            </div>
-               <% }) %>
+                <!-- <span class="tm-color-primary"><%= blog.createdAt.toLocaleDateString() %></span>
+                <span class="tm-color-primary"><%= moment.utc(blog.createdAt).format("LL") %></span>
+            </div> -->
+
             <hr>
             <div class="d-flex justify-content-between">
-                <span class="span">36 comments</span>
-                <span class="span">by Admin Nat</span>
+                <span class="tm-color-primary">Created at:</span>
+                <span class="tm-color-primary"><%= moment.utc(blog.createdAt).format("LL") %></span>
+                <span class="text-center"> <%-moment.utc(blog.createdAt).local().format('dddd')%></span>
             </div>
+            <% }) %>
           </div>
 
   </div></div>
@@ -99,7 +135,7 @@
     <div id="about" class="col-lg-6 col-md-6 col-sm-12 mt-2">
       <div class="footer-box about-widget">
         <h2 class="widget-title">About us</h2>
-        <p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        <p>The primary purpose is to provide various information happening around the world. Through this page you can gain up-to-date general knowledge on various topics</p>
       </div>
     </div>
 

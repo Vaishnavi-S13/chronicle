@@ -38,6 +38,7 @@ blog.post("/new", function(req, res){
  });
 blog.get("/:blogId",function(req, res){
   const reqBlogId = req.params.blogId;
+  
   Blog.findOne({count: reqBlogId},function(err,blog){
     res.render("full", {
       title:blog.title,
